@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import User, Message, Document 
 
-@Client.on_message(filters.command('settings'))
+@Client.on_message(filters.command('lyrics'))
 def lyrics(bot: Bot, update: Update, args):
     msg = update.effective_message
     query = " ".join(args)
