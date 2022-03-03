@@ -19,5 +19,4 @@ async def mp3(bot, message):
                    os.remove(file_path)
                except:
                    pass
-    
-               await txt.delete()           
+               
