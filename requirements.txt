@@ -10,3 +10,7 @@ imdbpy
 googletrans==3.1.0a0
 pyshorteners
 aiohttp==3.7.4
+asyncio==3.4.3
+aiofiles
+gtts
+pypdf2
