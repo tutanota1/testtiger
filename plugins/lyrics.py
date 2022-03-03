@@ -1,4 +1,7 @@
 from tswift import Song
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import User, Message, Document 
 
 @Client.on_message(filters.command('settings'))
 def lyrics(bot: Bot, update: Update, args):
