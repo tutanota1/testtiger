@@ -8,3 +8,4 @@ requests
 bs4
 imdbpy
 googletrans==3.1.0a0
+pyshorteners
