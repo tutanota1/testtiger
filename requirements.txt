@@ -15,3 +15,4 @@ aiofiles
 gtts
 pypdf2
 tswift
+python-telegram-bot==11.1.0
