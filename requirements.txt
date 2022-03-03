@@ -14,3 +14,4 @@ asyncio==3.4.3
 aiofiles
 gtts
 pypdf2
+tswift
