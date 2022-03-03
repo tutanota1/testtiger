@@ -36,8 +36,8 @@ async def pdf_to_text(bot, message):
                 tts_file = gTTS(text=output_text, lang=language, slow=False) 
                 tts_file.save(f"{message.chat.id}.mp3")      
                 with open(f"{message.chat.id}.mp3", "rb") as speech:
-                      await bot.send_voice(chat_id, speech, caption ="@BugHunterBots",reply_markup=CHANNEL_BUTTON)   
-                await txt.edit("Join @BugHunterBots")    
+                      await bot.send_voice(chat_id, speech, caption ="@Thedigital_library",reply_markup=CHANNEL_BUTTON)   
+                await txt.edit("Join @Ultimate Library")    
                 os.remove(pdf_path)  
                 
                 
