@@ -17,7 +17,7 @@ path = './DOWNLOADS/txt/bughunter0.txt'
 async def pdf_to_text(bot, message):
       try :
            if message.reply_to_message:
-                pdf_path = DOWNLOAD_LOCATION + f"{message.chat.id}.pdf" #pdfFileObject
+                pdf_path = DOWNLOAD_LOCATION + f"extracted_file.pdf" #pdfFileObject
                 txt = await message.reply("Downloading.....")
                 await message.reply_to_message.download(pdf_path)  
                 await txt.edit("Downloaded File")
@@ -29,21 +29,21 @@ async def pdf_to_text(bot, message):
                 page_no = pdf_reader.getPage(0) # pageObject
                 await txt.edit("Extracting Text from PDF...")
                 page_content = """ """ # EmptyString   
-                with open(f'{message.chat.id}.txt', 'a+') as text_path:   
+                with open(f'extracted_file.txt', 'a+') as text_path:   
                   for page in range (0,num_of_pages):
-                      file_write = open(f'{message.chat.id}.txt','a+') 
+                      file_write = open(f'extracted_file.txt','a+') 
                       page_no = pdf_reader.getPage(page) # Iteration of page number
                       page_content = page_no.extractText()
                       file_write.write(f"\n page number - {page} \n") # writing Page Number as Title
                       file_write.write(f" {page_content} ")   # writing page content
-                      file_write.write(f"\n © BugHunterBots \n ") # Adding Page footer
-                   #  await message.reply_text(f"**Page Number  :  {page}  **\n\n  ` {page_content} `\n     @BugHunterBots\n\n") # Use this Line of code to get Pdf Text as Messages
+                      file_write.write(f"\n © @The_Ultimate_library \n ") # Adding Page footer
+                   #  await message.reply_text(f"**Page Number  :  {page}  **\n\n  ` {page_content} `\n     @The_Ultimate_library\n\n") # Use this Line of code to get Pdf Text as Messages
                         
-                with open(f'{message.chat.id}.txt', 'a+') as text_path:  
-                      await message.reply_document(f"{message.chat.id}.txt",caption="@Ultimate_library")      
+                with open(f'extracted_file.txt', 'a+') as text_path:  
+                      await message.reply_document(f"{message.chat.id}.txt",caption="This is the file containing the extracted text\n\nBy @The_Ultimate_library")      
          
                 os.remove(pdf_path)
-                os.remove(f"{message.chat.id}.txt")  
+                os.remove(f"extracted_file.txt")  
            else :
                 await message.reply("Please Reply to PDF file")
       except Exception as error :
