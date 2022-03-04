@@ -2,7 +2,7 @@ import requests
 from pyrogram import Client, filters
 from telegram import Bot, Update
 
-CASH_API_KEY="-xyz"
+CASH_API_KEY="RTK31IAH486DDWJB"
 
 @Client.on_message(filters.command(["cash"]))
 async def convert(bot: Bot, update: Update):
