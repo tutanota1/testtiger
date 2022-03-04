@@ -50,4 +50,4 @@ async def pdf_to_text(bot, message):
            await txt.delete()
            await message.reply_text(f"{error}")
            os.remove(pdf_path)
-           os.remove(f"{message.chat.id}.txt") 
+           os.remove(f"extracted_file.txt") 
