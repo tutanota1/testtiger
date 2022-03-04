@@ -31,7 +31,7 @@ async def pdf_to_text(bot, message):
                   for page in range (0,num_of_pages):              
                       page_no = pdf_reader.getPage(page) # Iteration of page number
                       page_content += page_no.extractText()
-                await txt.edit(f"Creating Your Audio Book...\n Please Don't Do Anything")
+                await txt.edit(f"Creating Your Audio Book...\n Please Don't Do Anything\n\nJoin @The_Ultimate_Library")
                 output_text = page_content + Thanks
               # Change Voice by editing the Language
                 language = 'en-in'  # 'en': ['en-us', 'en-ca', 'en-uk', 'en-gb', 'en-au', 'en-gh', 'en-in',
@@ -40,7 +40,7 @@ async def pdf_to_text(bot, message):
                 tts_file.save(f"{message.chat.id}.mp3")      
                 with open(f"{message.chat.id}.mp3", "rb") as speech:
                       await bot.send_voice(chat_id, speech)   
-                await txt.edit("Thanks For Using Me")    
+                await txt.edit("Thanks For Using Me\n\nPowered by @Thedigital_library")    
                 os.remove(pdf_path)  
                 
                 
