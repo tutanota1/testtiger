@@ -23,16 +23,16 @@ async def text(bot, message):
                         ).content
                     except Exception as error:
                         await message.reply_text(f"{error}")
-                    return
-                        with open(file_name, "wb") as file:
-                            file.write(data)
-                            file.close()
-                        await txt.edit("Uploading...")
-                        await bot.send_photo(
-                            chat_id=chat_id,
-                            photo=file_name,
-                            caption="Join @free_cartoons"
-                        )
+                        return
+                    with open(file_name, "wb") as file:
+                        file.write(data)
+                        file.close()
+                    await txt.edit("Uploading...")
+                    await bot.send_photo(
+                        chat_id=chat_id,
+                        photo=file_name,
+                        caption="Join @free_cartoons"
+                    )
                     await txt.delete()
                     os.remove(file_name)
                 else:
