@@ -18,21 +18,21 @@ async def text(bot, message):
                     try:
                         # Can directly use pywhatkit module for this
                         data = requests.get(
-                        "https://pywhatkit.herokuapp.com/handwriting?text=%s&rgb=%s,%s,%s"
-                        % (text, rgb[0], rgb[1], rgb[2])
-                    ).content
-                except Exception as error:
-                    await message.reply_text(f"{error}")
-                return
-                    with open(file_name, "wb") as file:
-                        file.write(data)
-                        file.close()
-                    await txt.edit("Uploading...")
-                    await bot.send_photo(
-                        chat_id=chat_id,
-                        photo=file_name,
-                        caption="Join @BugHunterBots"
-                    )
+                            "https://pywhatkit.herokuapp.com/handwriting?text=%s&rgb=%s,%s,%s"
+                            % (text, rgb[0], rgb[1], rgb[2])
+                        ).content
+                    except Exception as error:
+                        await message.reply_text(f"{error}")
+                    return
+                        with open(file_name, "wb") as file:
+                            file.write(data)
+                            file.close()
+                        await txt.edit("Uploading...")
+                        await bot.send_photo(
+                            chat_id=chat_id,
+                            photo=file_name,
+                            caption="Join @free_cartoons"
+                        )
                     await txt.delete()
                     os.remove(file_name)
                 else:
