@@ -1,5 +1,8 @@
 from pyrogram import Client, filters
 
+BREAK_YOUR_LOVE = "💔"
+PIN_BALL = "🎳"
+
 # AESTHETIC------------ https://telegram.me/Josprojects ------------ #
 
 def aesthetify(string):
