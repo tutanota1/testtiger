@@ -4,7 +4,7 @@ from pyrogram.types import User, Message
 import requests
 import os
 
-@Client.on_message(filters.command('hand'))
+@Client.on_message(filters.command('write'))
 async def text(bot, message):
     if message.reply_to_message:
         text = str(message.reply_to_message.text)
@@ -30,7 +30,7 @@ async def text(bot, message):
             await bot.send_photo(
                 chat_id=chat_id,
                 photo=file_name,
-                caption="Join"
+                caption="Join @free_movie_channel"
             )
             await txt.delete()
             os.remove(file_name)
