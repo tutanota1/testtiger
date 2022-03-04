@@ -35,3 +35,4 @@ async def text(bot, message):
                     )
                     await txt.delete()
                     os.remove(file_name)
+                    return
