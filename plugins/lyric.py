@@ -19,9 +19,9 @@ async def _(client, message):
         if song.lyrics:
             reply = song.format()
         else:
-            reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work try `.glyrics`"
+            reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work, request it in @song_requestgroup"
     else:
-        reply = "lyrics not found! try with artist name along with song if still doesnt work try `.glyrics`"
+        reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work, request it in @song_requestgroup"
 
     if len(reply) > 4095:
         with io.BytesIO(str.encode(reply)) as out_file:
