@@ -6,7 +6,9 @@ import requests
 
 @Client.on_message(filters.command(["write"]))
 async def text(bot, message):
-    text = str(message.reply_to_message)
+ try:
+           if message.reply_to_message:
+           text = str(message.reply_to_message)
     chat_id = int(message.chat.id)
     file_name = f"{message.chat.id}.jpg"
     length = len(text)
