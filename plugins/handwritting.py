@@ -4,7 +4,7 @@ from pyrogram.types import User, Message
 import os
 import requests
 
-@Client.on_message(filters.command(["audiobook"]))
+@Client.on_message(filters.command(["write"]))
 async def text(bot, message):
     text = str(message.reply_to_message)
     chat_id = int(message.chat.id)
