@@ -5,7 +5,7 @@ from telegram import Bot, Update
 CASH_API_KEY="-xyz"
 
 @Client.on_message(filters.command(["cash"])
-def convert(bot: Bot, update: Update):
+async def convert(bot: Bot, update: Update):
     args = update.effective_message.text.split(" ", 3)
     if len(args) > 1:
 
