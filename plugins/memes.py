@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 
 BREAK_YOUR_LOVE = "💔"
 PIN_BALL = "🎳"
-
+COMMAND_HAND_LER = "/"
 # AESTHETIC------------ https://telegram.me/Josprojects ------------ #
 
 def aesthetify(string):
