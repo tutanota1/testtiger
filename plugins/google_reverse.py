@@ -2,6 +2,7 @@ import os
 import re
 import requests
 import urllib
+from pyrogram import Client, filters
 from urllib.request import urlopen
 from urllib.error import URLError, HTTPError
 from bs4 import BeautifulSoup
@@ -17,7 +18,7 @@ useragent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML
 opener.addheaders = [('User-agent', useragent)]
 
 
-@Client.on_message(filters.command(["audiobook"]))
+@Client.on_message(filters.command(["reverse"]))
 def reverse(bot: Bot, update: Update, args: List[str]):
     if os.path.isfile("okgoogle.png"):
         os.remove("okgoogle.png")
