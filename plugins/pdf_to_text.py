@@ -9,7 +9,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ForceReply
 from pyrogram.types import User, Message, Document 
 
-@bughunter0.on_message(filters.command(["pdf2txt"])) # PdfToText 
+@Client.on_message(filters.command(["pdf2txt"])) # PdfToText 
 async def pdf_to_text(bot, message):
       try :
            if message.reply_to_message:
@@ -36,7 +36,7 @@ async def pdf_to_text(bot, message):
                    #  await message.reply_text(f"**Page Number  :  {page}  **\n\n  ` {page_content} `\n     @BugHunterBots\n\n") # Use this Line of code to get Pdf Text as Messages
                         
                 with open(f'{message.chat.id}.txt', 'a+') as text_path:  
-                      await message.reply_document(f"{message.chat.id}.txt",caption="©@BugHunterBots")      
+                      await message.reply_document(f"{message.chat.id}.txt",caption="@Ultimate_library")      
          
                 os.remove(pdf_path)
                 os.remove(f"{message.chat.id}.txt")  
