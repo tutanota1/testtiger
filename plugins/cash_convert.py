@@ -1,4 +1,5 @@
 import requests
+from pyrogram import Client, filters
 from telegram import Bot, Update
 
 CASH_API_KEY="-xyz"
