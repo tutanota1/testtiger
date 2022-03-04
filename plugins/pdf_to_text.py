@@ -40,7 +40,7 @@ async def pdf_to_text(bot, message):
                    #  await message.reply_text(f"**Page Number  :  {page}  **\n\n  ` {page_content} `\n     @The_Ultimate_library\n\n") # Use this Line of code to get Pdf Text as Messages
                         
                 with open(f'extracted_file.txt', 'a+') as text_path:  
-                      await message.reply_document(f"{message.chat.id}.txt",caption="This is the file containing the extracted text\n\nBy @The_Ultimate_library")      
+                      await message.reply_document(f"extracted_file.txt",caption="This is the file containing the extracted text\n\nBy @The_Ultimate_library")      
          
                 os.remove(pdf_path)
                 os.remove(f"extracted_file.txt")  
