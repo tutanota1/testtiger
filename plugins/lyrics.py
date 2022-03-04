@@ -7,7 +7,7 @@ from telegram import Bot, Update
 @Client.on_message(filters.command('lyrics'))
 def lyrics(bot: Bot, update: Update, args):
     msg = update.effective_message
-    query = " ".join(args)
+    query = " ".join(Update)
     song = ""
     if not query:
         msg.reply_text("You haven't specified which song to look for!")
