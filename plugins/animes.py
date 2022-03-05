@@ -23,7 +23,7 @@ class ua():
         ]
         return choice(user_agent_list)
 
-@Client.on_message(filters.command(["anime", f"anime@{BOT_USERNAME}"]))
+@Client.on_message(filters.command(["anime"]))
 async def anime(client, message: Message):
     if len(message.command) < 2:
         return await message.reply_text("Send **/Anime AnimeName** to get info.")
@@ -36,12 +36,12 @@ async def anime(client, message: Message):
                                          reply_markup=InlineKeyboardMarkup(
                                              [
                                                  [
-                                                     InlineKeyboardButton("Open In Kitsu",
-                                                                          url=f"https://kitsu.io/anime/{search_result['id']}")
+                                                     InlineKeyboardButton("Anime Group",
+                                                                          url=f"https://t.me/free_cartoons")
                                                  ],
                                                  [
-                                                     InlineKeyboardButton(text="Search Again",
-                                                                          switch_inline_query_current_chat="anime")
+                                                     InlineKeyboardButton(text="Powered By",
+                                                                          url=f"https://t.me/song_requestgroup")
                                                  ]
                                              ]
                                          ))
@@ -52,16 +52,16 @@ async def anime(client, message: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Open In Kitsu", url=f"https://kitsu.io/manga/{search_result['id']}")
+                        InlineKeyboardButton("Anime Group", url=f"https://t.me/free_cartoons")
                     ],
                     [
-                        InlineKeyboardButton(text="Search Again", switch_inline_query_current_chat="anime")
+                        InlineKeyboardButton(text="Powered By", url=f"https://t.me/song_requestgroup")
                     ]
                 ]
             ), reply_to_message_id=replyto.message_id)
 
 
-@Client.on_message(filters.command(["manga", f"manga@{BOT_USERNAME}"]))
+@Client.on_message(filters.command(["manga"]))
 async def manga(client, message: Message):
     if len(message.command) < 2:
         return await message.reply_text("Send **/Manga MangaName** to get info.")
@@ -74,12 +74,12 @@ async def manga(client, message: Message):
                                          reply_markup=InlineKeyboardMarkup(
                                              [
                                                  [
-                                                     InlineKeyboardButton("Open In Kitsu",
-                                                                          url=f"https://kitsu.io/anime/{search_result['id']}")
+                                                     InlineKeyboardButton("Anime Group",
+                                                                          url=f"https://t.me/free_cartoons")
                                                  ],
                                                  [
-                                                     InlineKeyboardButton(text="Search Again",
-                                                                          switch_inline_query_current_chat="anime")
+                                                     InlineKeyboardButton(text="Powered By",
+                                                                          url=f"https://t.me/song_requestgroup")
                                                  ]
                                              ]
                                          ))
@@ -99,7 +99,7 @@ async def manga(client, message: Message):
             ), reply_to_message_id=replyto.message_id)
 
 
-@Client.on_message(filters.command(["aquote", f"aquote@{BOT_USERNAME}"]))
+@Client.on_message(filters.command(["aquote"]))
 async def manga(client, message: Message):
     if len(message.command) < 2:
         query = requests.get('https://animechan.vercel.app/api/random', headers={'User-Agent': ua.random()}).json()
@@ -116,7 +116,7 @@ async def manga(client, message: Message):
             return await message.reply_text("No quotes found.")
 
 
-@Client.on_message(filters.command(["cquote", f"cquote@{BOT_USERNAME}"]))
+@Client.on_message(filters.command(["cquote"]))
 async def manga(client, message: Message):
     if len(message.command) < 2:
         query = requests.get('https://animechan.vercel.app/api/random', headers={'User-Agent': ua.random()}).json()
