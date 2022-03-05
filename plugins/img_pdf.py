@@ -74,7 +74,7 @@ async def img_to_pdf(_, message: Message):
     start_time = time()
 
     if reply.media_group_id:
-        messages = await ufs.get_media_group(
+        messages = await Client.get_media_group(
             message.chat.id,
             reply.message_id,
         )
