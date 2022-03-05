@@ -7,6 +7,7 @@ ytthumb
 umongo==3.0.0
 telegraph
 requests
+img2pdf
 bs4
 imdbpy
 googletrans==3.1.0a0
