@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from plugins.http import get, resp_get
 
 
-@Clent.on_message(filters.command("catfacts"))
+@Client.on_message(filters.command("catfacts"))
 async def catfacts(client, message):
     """
     Get cat facts
