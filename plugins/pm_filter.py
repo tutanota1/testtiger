@@ -429,9 +429,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Font', callback_data='font'),
             InlineKeyboardButton('Gen Link🔗', callback_data='gen_link')
         ], [
-            InlineKeyboardButton('🦊Animals', callback_data='covid'),
-            InlineKeyboardButton('Animes', callback_data='font'),
-            InlineKeyboardButton('Handwritting✍️', callback_data='gen_link')
+            InlineKeyboardButton('🦊Animals', callback_data='animals'),
+            InlineKeyboardButton('Animes', callback_data='animes'),
+            InlineKeyboardButton('Handwritting✍️', callback_data='handwritting')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('Next ➡️', callback_data='stats')
@@ -466,6 +466,66 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+    elif query.data == "covid":
+        buttons = [[
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.COVID_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "animals":
+        buttons = [[
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.ANIMALS_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "animes":
+        buttons = [[
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.ANIMES_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "handwritting":
+        buttons = [[
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.HAND_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )        
+    elif query.data == "font":
+        buttons = [[
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.FONT_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "gen_link":
+        buttons = [[
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.LINK_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )        
     elif query.data == "manuelfilter":
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help'),
