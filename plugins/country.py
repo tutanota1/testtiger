@@ -41,4 +41,3 @@ Timezone : `{country.timezones()}`"""
                        reply_markup=reply_markup,
                        disable_web_page_preview=True
                    )
-
