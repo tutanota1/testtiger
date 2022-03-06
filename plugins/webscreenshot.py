@@ -1,7 +1,6 @@
-from pyrogram import filters
+from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from wbb import app
 from plugins.http import get
 
 @Client.on_message(filters.command("ssweb"))
