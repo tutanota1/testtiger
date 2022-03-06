@@ -34,4 +34,5 @@ def phone(update, context):
     e = "Carrier: " + str(carrier)
     f = "Device: " + str(line_type)
     g = f"{aa}\n{a}\n{b}\n{c}\n{d}\n{e}\n{f}"
-    await m.reply_text(update.effective_message, g)
+    
+        await m.reply_text(update.effective_message, g)
