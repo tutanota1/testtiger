@@ -6,7 +6,7 @@ from pyrogram import Client, filters
 @Client.on_message(filters.command('phone'))
 def phone(update, context):
 
-    args = update.effective_message.text.split(None, 1)
+    args = message.text.split(None, 1)[1]
     information = args[1]
     number = information
     key = "fe65b94e78fc2e3234c1c6ed1b771abd"
