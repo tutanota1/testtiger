@@ -1,5 +1,5 @@
 import json
-
+from pyrogram.types import Message
 import requests
 from pyrogram import Client, filters
 
