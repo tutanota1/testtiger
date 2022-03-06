@@ -29,7 +29,31 @@ logger.setLevel(logging.ERROR)
 BUTTONS = {}
 SPELL_CHECK = {}
 
-
+@Client.on_message(filters.command("help") & filters.incoming & ~filters.edited)
+async def help(client, message):
+        buttons = [[
+            InlineKeyboardButton('🛠Filters', callback_data='manuelfilter'),
+            InlineKeyboardButton('Connection', callback_data='coct'),
+            InlineKeyboardButton('Add files➕', callback_data='autofilter')
+        ], [
+            InlineKeyboardButton('🦠Covid', callback_data='covid'),
+            InlineKeyboardButton('Font', callback_data='font'),
+            InlineKeyboardButton('Gen Link🔗', callback_data='gen_link')
+        ], [
+            InlineKeyboardButton('🦊Animals', callback_data='animals'),
+            InlineKeyboardButton('Animes', callback_data='animes'),
+            InlineKeyboardButton('Handwritting✍️', callback_data='handwritting')
+        ], [
+            InlineKeyboardButton('🏠 Home', callback_data='start'),
+            InlineKeyboardButton('Next ➡️', callback_data='stats')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.HELP_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+        
 @Client.on_message(filters.group & filters.text & ~filters.edited & filters.incoming)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
