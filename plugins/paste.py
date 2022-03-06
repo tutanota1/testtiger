@@ -43,7 +43,7 @@ async def p_paste(message, extension=None):
 @Client.on_message(filters.command(["tgpaste", "pasty", "paste"]))
 async def pasty(client, message):
     pablo = await message.reply_text("`Please wait...`")
-    tex_t = message.text
+    tex_t = message.text.strip().split(None, 1)[1].lower()
     message_s = tex_t
     if not tex_t:
         if not message.reply_to_message:
