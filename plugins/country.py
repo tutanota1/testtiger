@@ -34,12 +34,12 @@ Timezone : `{country.timezones()}`"""
                        ]
                    ]
                )
-    
-    try:
-        await update.reply_text(
-            text=info,
-            reply_markup=reply_markup,
-            disable_web_page_preview=True
-        )
-    except Exception as error:
+            
+               try:
+                   await update.reply_text(
+                       text=info,
+                       reply_markup=reply_markup,
+                       disable_web_page_preview=True
+                   )
+               except Exception as error:
         print(error)
