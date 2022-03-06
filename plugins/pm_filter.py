@@ -418,17 +418,23 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Piracy Is Crime')
+        await query.answer('Welcome to my HELP Menu')
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
-            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
-        ], [
+            InlineKeyboardButton('🛠Filters', callback_data='manuelfilter'),
             InlineKeyboardButton('Connection', callback_data='coct'),
-            InlineKeyboardButton('Extra Mods', callback_data='extra')
+            InlineKeyboardButton('Add files➕', callback_data='autofilter')
+        ], [
+            InlineKeyboardButton('🦠Covid', callback_data='covid'),
+            InlineKeyboardButton('Font', callback_data='font'),
+            InlineKeyboardButton('Gen Link🔗', callback_data='gen_link')
+        ], [
+            InlineKeyboardButton('🦊Animals', callback_data='covid'),
+            InlineKeyboardButton('Animes', callback_data='font'),
+            InlineKeyboardButton('Handwritting✍️', callback_data='gen_link')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('🔮 Status', callback_data='stats')
+            InlineKeyboardButton('Next ➡️', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -438,7 +444,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria'),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/check_this_channel'),
             InlineKeyboardButton('♥️ Source', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
