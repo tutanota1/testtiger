@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/Akbotmakersnew",
-    "repository": "https://github.com/Akbotmakersnew/LUCIFER",
+    "website": "https://github.com/tutanota1/testtiger",
+    "repository": "https://github.com/tutanota1/testtiger",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
